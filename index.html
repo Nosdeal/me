@@ -25,10 +25,10 @@
                 <h5>Front-end developer</h5>
             </div>
 
-            <div id="icone">
-                <i class="fa-solid fa-caret-down"></i>
+            <div onclick="displaySobre()" id="icone">
+                <i id="animação" class="fa-solid fa-caret-down"></i>
             </div>
-            <div class="sobre">
+            <div style="display: none;" id="sobre">
                 <p>Apaixonado por tecnologia e desafios, estou me desafiando a entrar de cabeça no mundo do desenvolvimento Web.</p>
             </div>
 
@@ -43,5 +43,13 @@
             </div>
 
         </section>
+        <script>
+            function displaySobre(){
+                let icone = document.getElementById('animação');
+                icone.classList.toggle('rotate');
+                let sobre = document.querySelector('sobre');
+                sobre.classList.toggle('ativar')
+            }
+        </script>
     </main>
     </html>
